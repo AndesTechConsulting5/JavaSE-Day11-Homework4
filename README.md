@@ -18,14 +18,14 @@ Homework 4.
 
 Создать тестовые методы:
 
-createAccountPositiveTest
-createAccountNegativeTest
+createAccountPositiveTest,
+createAccountNegativeTest,
 
-putPositiveTest
-putNegativeTest
+putPositiveTest,
+putNegativeTest,
 
-withdrawalPositiveTest
-withdrawalNegativeTest
+withdrawalPositiveTest,
+withdrawalNegativeTest.
 
 Все отрицательные тесты должны проходить при неудачном действии
 со счётом, а положительные - когда операция со счётом успешна.
