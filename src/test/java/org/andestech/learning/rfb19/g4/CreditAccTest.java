@@ -44,7 +44,7 @@ public class CreditAccTest {
 
     @Test
     public void withdrawalNegativeTest(){
-        double testwithdrawal = LIM_CRD_REST;
+        double testwithdrawal = INIT_BALANCE;
         double expectedAmount = INIT_BALANCE - testwithdrawal;
         testCreditAccount.withdrawal( testwithdrawal );
         Assert.assertNotEquals( testCreditAccount.getBalance(), expectedAmount,0 );
