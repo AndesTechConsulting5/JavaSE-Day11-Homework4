@@ -19,7 +19,7 @@ public class CreditAccount extends Account {
             //throw new CreditAccountException("---> EXCEPTION while creating CREDIT account");
             if (customer.getAge() > MIN_AGE && customer.isHistory()) {
                 System.out.println("[INFO] [CREDIT] Creating  account");
-                //System.out.println("Your balance is " + getBalance());
+                System.out.println("Your balance is " + balance );
 
                 return new CreditAccount(accountId, balance, customer);
             } else System.out.println("[ERROR] Age or credit history is not VALID for creating credit account");
