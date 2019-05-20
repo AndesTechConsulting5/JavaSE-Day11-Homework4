@@ -31,6 +31,13 @@
       <artifactId>JavaSE-Utils</artifactId>
       <version>1.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.andestech.learning.rfb19.g4.homework3</groupId>
+      <artifactId>JavaSE-Day08-HomeWork3</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+
 
   </dependencies>
 
