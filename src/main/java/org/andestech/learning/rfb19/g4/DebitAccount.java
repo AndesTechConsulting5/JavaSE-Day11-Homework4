@@ -10,10 +10,11 @@ public class DebitAccount extends Account {
     public DebitAccount(int accountId, double balance, Customer customer) /* throws DebitAccountException */ {
         super(accountId, balance, customer);
 
-        if (balance > LIM_DBT_REST) {
-
+        if (balance >= LIM_DBT_REST) {
+            System.out.println("----------------------------------");
             System.out.println("Creating DEBIT account");
             System.out.println("Your balance is " + getBalance());
+            System.out.println("----------------------------------");
 
 
         } else {
@@ -30,9 +31,11 @@ public class DebitAccount extends Account {
         if ((cash < LIM_DBT_WDR) && (getBalance() - cash > LIM_DBT_REST) ) {
 
             setBalance(getBalance() - cash);
-            System.out.println(" [INFO] [DEBIT] withdrawal OK, balance setted to --> " + getBalance() );
+            System.out.println("withdrawal amonut:" + cash );
+            System.out.println("[INFO] [DEBIT] withdrawal OK, balance setted to --> " + getBalance() );
         } else {
-            System.out.println(" [ERROR] [DEBIT] withdrawal not succeful");
+            System.out.println("withdrawal amonut:" + cash );
+            System.out.println("[ERROR] [DEBIT] withdrawal not succeful");
         }
     }
 
@@ -46,10 +49,12 @@ public class DebitAccount extends Account {
         // не более лимита избытка
         if ( cash + getBalance() < LIM_DBT_EXC ){
             setBalance( getBalance() + cash );
-            System.out.println(" [INFO] [DEBIT] putting money OK, balance setted to --> " + getBalance() );
+            System.out.println("Putting amonut:" + cash );
+            System.out.println("[INFO] [DEBIT] putting money OK, balance setted to --> " + getBalance() );
 
         } else {
-            System.out.println(" [ERROR] [DEBIT] putting money isn't succeful");
+            System.out.println("Putting amonut:" + cash );
+            System.out.println("[ERROR] [DEBIT] putting money isn't succeful");
         }
 
 
